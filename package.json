@@ -1,0 +1,21 @@
+{
+  "name": "faq_accordion",
+  "version": "1.0.0",
+  "description": "Frontend Mentor - FAQ Accordion",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss src/css/styles.scss -u autoprefixer postcss-nested postcss-advanced-variables -o src/dest/output.css --parser postcss-scss --no-map",
+    "watch:css": "postcss src/css/styles.scss -u autoprefixer postcss-nested postcss-advanced-variables -o src/dest/output.css --parser postcss-scss --no-map -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-cli": "^11.0.0",
+    "postcss-nested": "^6.0.1",
+    "postcss-scss": "^4.0.9"
+  }
+}
