@@ -1,4 +1,117 @@
 body {
   background-color: hsl(275, 100%, 97%);
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
+}
+
+body::before {
+  content: "";
+  background-image: url("/images/background-pattern-desktop.svg");
+  height: 12.5rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+main {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid hsl(275, 100%, 97%);
+  margin: 0 0 2rem 0;
+}
+
+#faq-section {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  max-width: 32rem;
+  padding: 2rem 2.5rem 1rem;
+}
+
+#faq-section__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+#faq-section__header img {
+  width: 35px;
+}
+
+#faq-section__header h1 {
+  color: hsl(292, 42%, 14%);
+  font-size: 3rem;
+  margin: 0 0 0 2rem;
+}
+
+.accordion__content {
+  cursor: pointer;
+}
+
+.accordion__content.active .content__label::before {
+  content: url("/images/icon-minus.svg");
+}
+
+.accordion__content.active .content__label h2 {
+  color: hsl(281, 83%, 54%);
+}
+
+.accordion__content.active .content__text {
+  margin: 2rem 0;
+  max-height: 200px;
+}
+
+.content__label {
+  position: relative;
+}
+
+.content__label::before {
+  content: url("/images/icon-plus.svg");
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-45%);
+  -ms-transform: translateY(-45%);
+  transform: translateY(-45%);
+}
+
+.content__label h2 {
+  color: hsl(292, 42%, 14%);
+  font-size: 1.1rem;
+  margin: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.content__label h2:hover {
+  color: hsl(281, 83%, 54%);
+}
+
+.content__text {
+  margin: 1rem 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.content__text p {
+  color: hsl(292, 16%, 49%);
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
 }
